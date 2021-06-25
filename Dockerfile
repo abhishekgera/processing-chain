@@ -44,4 +44,7 @@ RUN pip3 install --no-cache-dir poetry && \
 ENV NAME pnats_processing_chain
 RUN mkdir /proponent-databases
 
+RUN pip3 install bufferer==0.20
+RUN cp -R spinners /spinners
+
 ENTRYPOINT ["poetry", "run", "python3"]
